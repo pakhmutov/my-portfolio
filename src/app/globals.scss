@@ -10,8 +10,8 @@
     --text: #e8e6e0;
     --muted: #666;
     --muted2: #444;
-    --accent: #c8f135;
-    --accent2: #7dd3fc;
+    --accent: #c084fc;
+    --accent2: #e879f9;
     --mono: 'Geist Mono', monospace;
     --serif: 'Instrument Serif', serif;
 }
@@ -23,6 +23,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 html {
@@ -36,6 +37,11 @@ body {
     font-size: 14px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+}
+
+main, nav, footer {
+    position: relative;
+    z-index: 1;
 }
 
 ::selection {

@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.scss';
+import { Cursor } from '@/components/Cursor/Cursor';
+import { Loader } from '@/components/Loader/Loader';
+import { Particles } from '@/components/Particles/Particles';
 
 export const metadata: Metadata = {
     title: 'Vladimir Pakhmutov - Frontend Engineer',
@@ -19,7 +22,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <Loader />
+                <Cursor />
+                <Particles />
+                {children}
+            </body>
         </html>
     );
 }
