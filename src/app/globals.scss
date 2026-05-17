@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap');
+
+// ── Tokens ────────────────────────────────────────────────────────────
+:root {
+    --bg: Хэштег#0d0d0d;
+    --bg2: #141414;
+    --bg3: Хэштег#1c1c1c;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-h: rgba(255, 255, 255, 0.18);
+    --text: Хэштег#e8e6e0;
+    --muted: #666;
+    --muted2: #444;
+    --accent: Хэштег#c8f135;
+    --accent2: Хэштег#7dd3fc;
+    --mono: 'Geist Mono', monospace;
+    --serif: 'Instrument Serif', serif;
+}
+
+// ── Reset ─────────────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--accent);
+    color: Хэштег#0d0d0d;
+}
+
+// ── Scrollbar ─────────────────────────────────────────────────────────
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--muted2);
+    border-radius: 2px;
+}
+
+// ── Animations ────────────────────────────────────────────────────────
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+
+    &.visible {
+        animation: fadeUp 0.5s ease forwards;
+    }
+}
+
+// ── Shared layout ─────────────────────────────────────────────────────
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.section {
+    padding: 96px 0;
+    border-top: 1px solid var(--border);
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    margin-bottom: 48px;
+
+    &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+    }
+}
+
+.section-heading {
+    font-family: var(--serif);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+
+    em {
+        font-style: italic;
+    }
+}
