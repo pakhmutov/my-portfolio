@@ -18,9 +18,13 @@ export function Projects() {
                     <em>work</em>
                 </h2>
                 <div className={styles.list}>
-                    {DATA.projects.map((p) => (
-                        <ProjectCard key={p.num} project={p} />
-                    ))}
+                    {DATA.projects.length > 0 ? (
+                        DATA.projects.map((p) => (
+                            <ProjectCard key={p.num} project={p} />
+                        ))
+                    ) : (
+                        <p className={styles.soon}>Coming soon.</p>
+                    )}
                 </div>
             </div>
         </section>

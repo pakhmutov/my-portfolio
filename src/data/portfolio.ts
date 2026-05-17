@@ -26,38 +26,7 @@ export const DATA: SiteData = {
         { name: 'Testing', level: 'LEARNING' },
     ],
 
-    projects: [
-        {
-            num: '001',
-            title: 'Project Alpha',
-            description:
-                'A dashboard for monitoring real-time data pipelines. Built a custom charting layer on top of D3 to handle 10k+ data points without jank. Reduced load time by 60% via route-level code splitting.',
-            tags: ['Next.js', 'TypeScript', 'D3', 'REST API', 'Vercel'],
-            highlight: ['Next.js', 'TypeScript'],
-            github: 'https://github.com/johndoe/alpha',
-            live: 'https://alpha.johndoe.dev',
-        },
-        {
-            num: '002',
-            title: 'Project Beta',
-            description:
-                'Full-stack SaaS starter with auth, billing, and team management. Designed a component system from scratch — zero UI library dependency. Used by 3 side projects as a base.',
-            tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Docker'],
-            highlight: ['React', 'Node.js'],
-            github: 'https://github.com/johndoe/beta',
-            live: null,
-        },
-        {
-            num: '003',
-            title: 'Project Gamma',
-            description:
-                'CLI tool for scaffolding React component trees from a JSON schema. Saves ~20 minutes per feature. Published to npm, 200+ downloads.',
-            tags: ['TypeScript', 'Node.js', 'npm'],
-            highlight: ['TypeScript'],
-            github: 'https://github.com/johndoe/gamma',
-            live: null,
-        },
-    ],
+    projects: [],
 
     posts: [],
 
