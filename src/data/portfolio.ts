@@ -7,7 +7,7 @@ export const DATA: SiteData = {
     available: true,
 
     bio: [
-        "Frontend developer with 4 years of experience. Currently at ICE Inc. (US), previously at Komanda F5. Based in Belgrade.",
+        "Frontend developer with 4 years of experience. Currently at ICE Inc. (US). Based in Belgrade.",
         'I work primarily in React, Next.js, and TypeScript. I care about clean component architecture, maintainable code, and the details that make an interface feel right.',
         'Open to new opportunities — looking for a team that moves thoughtfully and cares about craftsmanship.',
     ],
