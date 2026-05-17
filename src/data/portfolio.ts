@@ -1,8 +1,8 @@
 import type { SiteData } from '@/types';
 
 export const DATA: SiteData = {
-    name: { first: 'John', last: 'Doe' },
-    handle: 'jd.dev',
+    name: { first: 'Vladimir', last: 'Pakhmutov' },
+    handle: 'vpakhmutov.dev',
     role: 'Frontend Engineer',
     available: true,
 

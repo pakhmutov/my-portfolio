@@ -2,16 +2,16 @@
 
 // ── Tokens ────────────────────────────────────────────────────────────
 :root {
-    --bg: Хэштег#0d0d0d;
+    --bg: #0d0d0d;
     --bg2: #141414;
-    --bg3: Хэштег#1c1c1c;
+    --bg3: #1c1c1c;
     --border: rgba(255, 255, 255, 0.08);
     --border-h: rgba(255, 255, 255, 0.18);
-    --text: Хэштег#e8e6e0;
+    --text: #e8e6e0;
     --muted: #666;
     --muted2: #444;
-    --accent: Хэштег#c8f135;
-    --accent2: Хэштег#7dd3fc;
+    --accent: #c8f135;
+    --accent2: #7dd3fc;
     --mono: 'Geist Mono', monospace;
     --serif: 'Instrument Serif', serif;
 }
@@ -40,7 +40,7 @@ body {
 
 ::selection {
     background: var(--accent);
-    color: Хэштег#0d0d0d;
+    color: #0d0d0d;
 }
 
 // ── Scrollbar ─────────────────────────────────────────────────────────

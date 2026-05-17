@@ -97,10 +97,10 @@
 .btnPrimary {
     @extend %btn;
     background: var(--accent);
-    color: Хэштег#0d0d0d;
+    color: #0d0d0d;
 
     &:hover {
-        background: Хэштег#d4f545;
+        background: #d4f545;
     }
 }
 

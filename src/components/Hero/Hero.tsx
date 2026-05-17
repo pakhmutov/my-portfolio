@@ -39,10 +39,10 @@ export function Hero() {
                 </p>
 
                 <div className={styles.actions}>
-                    <a href="Хэштег#projects" className={styles.btnPrimary}>
+                    <a href="#projects" className={styles.btnPrimary}>
                         View projects →
                     </a>
-                    <a href="Хэштег#contact" className={styles.btnGhost}>
+                    <a href="#contact" className={styles.btnGhost}>
                         Get in touch
                     </a>
                 </div>

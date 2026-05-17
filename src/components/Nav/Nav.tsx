@@ -28,7 +28,7 @@ export function Nav() {
     return (
         <nav className={styles.nav}>
             <div className={styles.inner}>
-                <Link href="Хэштег#hero" className={styles.logo}>
+                <Link href="#hero" className={styles.logo}>
                     {handle}
                     <span>.{ext}</span>
                 </Link>
