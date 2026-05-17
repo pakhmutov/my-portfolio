@@ -18,13 +18,17 @@ export function Writing() {
                     <em>notes</em>
                 </h2>
                 <div ref={ref} className="fade-in">
-                    {DATA.posts.map((post, i) => (
-                        <Link key={i} href={post.href} className={styles.row}>
-                            <span className={styles.date}>{post.date}</span>
-                            <span className={styles.title}>{post.title}</span>
-                            <span className={styles.tag}>{post.tag}</span>
-                        </Link>
-                    ))}
+                    {DATA.posts.length > 0 ? (
+                        DATA.posts.map((post, i) => (
+                            <Link key={i} href={post.href} className={styles.row}>
+                                <span className={styles.date}>{post.date}</span>
+                                <span className={styles.title}>{post.title}</span>
+                                <span className={styles.tag}>{post.tag}</span>
+                            </Link>
+                        ))
+                    ) : (
+                        <p className={styles.soon}>Coming soon.</p>
+                    )}
                 </div>
             </div>
         </section>

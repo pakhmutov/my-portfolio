@@ -33,6 +33,14 @@
     transition: color 0.15s;
 }
 
+.soon {
+    font-size: 13px;
+    color: var(--muted2);
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
 .tag {
     font-size: 10px;
     color: var(--muted2);

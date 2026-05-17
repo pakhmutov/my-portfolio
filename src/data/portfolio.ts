@@ -7,23 +7,23 @@ export const DATA: SiteData = {
     available: true,
 
     bio: [
-        "I'm a frontend developer with 3 years of experience building production web applications. I care about code quality, performance, and the details that make an interface feel right.",
-        'Comfortable across the stack — from designing component APIs in React to writing REST endpoints in Node. I know the difference between code that works and code that scales.',
-        'Currently looking for a team that cares about craftsmanship and moves thoughtfully.',
+        "Frontend developer with 4 years of experience. Currently at ICE Inc. (US), previously at Komanda F5. Based in Belgrade.",
+        'I work primarily in React, Next.js, and TypeScript. I care about clean component architecture, maintainable code, and the details that make an interface feel right.',
+        'Open to new opportunities — looking for a team that moves thoughtfully and cares about craftsmanship.',
     ],
 
-    stack: ['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind', 'Figma'],
+    stack: ['React', 'Next.js', 'TypeScript', 'SCSS', 'Node.js', 'Figma'],
     stackHighlight: ['React', 'Next.js', 'TypeScript'],
 
     skills: [
         { name: 'React', level: 'CORE' },
         { name: 'Next.js', level: 'CORE' },
         { name: 'TypeScript', level: 'DAILY' },
-        { name: 'Node.js', level: 'DAILY' },
+        { name: 'SCSS', level: 'DAILY' },
+        { name: 'Node.js', level: 'SOLID' },
         { name: 'REST/GraphQL', level: 'SOLID' },
-        { name: 'Tailwind', level: 'SOLID' },
-        { name: 'Testing', level: 'LEARNING' },
         { name: 'Figma', level: 'SOLID' },
+        { name: 'Testing', level: 'LEARNING' },
     ],
 
     projects: [
@@ -59,35 +59,16 @@ export const DATA: SiteData = {
         },
     ],
 
-    posts: [
-        {
-            date: '2024.11',
-            title: 'Why I stopped using useEffect for data fetching',
-            tag: 'REACT',
-            href: '/writing/useeffect-data-fetching',
-        },
-        {
-            date: '2024.09',
-            title: 'TypeScript patterns I actually use at work',
-            tag: 'TS',
-            href: '/writing/typescript-patterns',
-        },
-        {
-            date: '2024.07',
-            title: 'Building a component library without burning out',
-            tag: 'DX',
-            href: '/writing/component-library',
-        },
-    ],
+    posts: [],
 
     contacts: [
-        { platform: 'EMAIL', value: 'john@example.com', href: 'mailto:john@example.com' },
-        { platform: 'GITHUB', value: 'github.com/johndoe', href: 'https://github.com/johndoe' },
+        { platform: 'EMAIL', value: 'vladimir.pakhmutoff@gmail.com', href: 'mailto:vladimir.pakhmutoff@gmail.com' },
+        { platform: 'GITHUB', value: 'github.com/pakhmutov', href: 'https://github.com/pakhmutov' },
         {
             platform: 'LINKEDIN',
-            value: 'linkedin.com/in/johndoe',
-            href: 'https://linkedin.com/in/johndoe',
+            value: 'linkedin.com/in/vladimir-pakhmutov',
+            href: 'https://www.linkedin.com/in/vladimir-pakhmutov/',
         },
-        { platform: 'TELEGRAM', value: '@johndoe', href: 'https://t.me/johndoe' },
+        { platform: 'TELEGRAM', value: '@ryrrary', href: 'https://t.me/ryrrary' },
     ],
 };
