@@ -1,0 +1,61 @@
+.inner {
+    max-width: 560px;
+}
+
+.lead {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--bg2);
+    text-decoration: none;
+    transition: background 0.15s;
+}
+
+.linkHovered {
+    background: var(--bg3);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.platform {
+    font-size: 11px;
+    color: var(--muted2);
+    letter-spacing: 0.08em;
+    width: 72px;
+}
+.value {
+    font-size: 13px;
+    color: var(--text);
+}
+
+.arrow {
+    font-size: 12px;
+    color: var(--muted2);
+    transition:
+        color 0.15s,
+        transform 0.15s;
+    display: inline-block;
+}
+
+.arrowHovered {
+    color: var(--accent);
+    transform: translateX(4px);
+}
