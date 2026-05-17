@@ -4,7 +4,7 @@ import { About } from '@/components/About/About';
 import { Projects } from '@/components/Projects/Projects';
 import { Writing } from '@/components/Writing/Writing';
 import { Contact } from '@/components/Contact/Contact';
-// import { Footer } from '@/components/Footer/Footer';
+import { Footer } from '@/components/Footer/Footer';
 
 export default function Home() {
     return (
@@ -17,7 +17,7 @@ export default function Home() {
                 <Writing />
                 <Contact />
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

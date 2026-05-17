@@ -1,0 +1,29 @@
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy {
+    font-size: 11px;
+    color: var(--muted2);
+    letter-spacing: 0.06em;
+}
+.made {
+    font-size: 11px;
+    color: var(--muted2);
+}
+.accent {
+    color: var(--accent);
+}
+
+@media (max-width: 640px) {
+    .made {
+        display: none;
+    }
+}
