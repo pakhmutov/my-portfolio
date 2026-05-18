@@ -26,7 +26,17 @@ export const DATA: SiteData = {
         { name: 'Testing', level: 'LEARNING' },
     ],
 
-    projects: [],
+    projects: [
+        {
+            num: '01',
+            title: 'Code Review Assistant',
+            description: 'Web app that takes a code snippet and returns a structured AI-powered review across four categories: bugs, improvements, security, and code style. Built with Next.js App Router and Gemini 2.5 Flash, streamed response with animated category status.',
+            tags: ['Next.js', 'TypeScript', 'Gemini AI', 'SCSS', 'Vercel'],
+            highlight: ['Next.js', 'TypeScript', 'Gemini AI'],
+            github: 'https://github.com/pakhmutov/code-review-assistant',
+            live: 'https://code-review-assistant-vp.vercel.app/',
+        },
+    ],
 
     posts: [],
 
