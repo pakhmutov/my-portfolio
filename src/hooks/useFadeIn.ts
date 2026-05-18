@@ -13,6 +13,10 @@ export function useFadeIn() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     el.classList.add('visible');
+                    el.addEventListener('animationend', () => {
+                        el.classList.remove('fade-in', 'visible');
+                        el.style.opacity = '1';
+                    }, { once: true });
                     observer.unobserve(el);
                 }
             },
