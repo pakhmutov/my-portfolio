@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { DATA } from '@/data/portfolio';
 import styles from './Nav.module.scss';
 
-const LINKS = ['about', 'projects', 'writing', 'contact'] as const;
+const LINKS = ['about', 'projects', 'contact'] as const;
 
 export function Nav() {
     const [active, setActive] = useState('hero');
