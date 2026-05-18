@@ -2,7 +2,7 @@ import type { SiteData } from '@/types';
 
 export const DATA: SiteData = {
     name: { first: 'Vladimir', last: 'Pakhmutov' },
-    handle: 'vpakhmutov.dev',
+    handle: 'vpakhmutov.vercel.app',
     role: 'Frontend Engineer',
     available: true,
 
