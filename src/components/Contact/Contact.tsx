@@ -11,7 +11,7 @@ export function Contact() {
     return (
         <section id="contact" className="section">
             <div className="container">
-                <p className="section-label">04 / CONTACT</p>
+                <p className="section-label">03 / CONTACT</p>
                 <div ref={ref} className={`fade-in ${styles.inner}`}>
                     <h2 className="section-heading">
                         Let's
