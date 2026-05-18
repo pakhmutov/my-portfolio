@@ -3,6 +3,7 @@ import './globals.scss';
 import { Cursor } from '@/components/Cursor/Cursor';
 import { Loader } from '@/components/Loader/Loader';
 import { Particles } from '@/components/Particles/Particles';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
     title: 'Vladimir Pakhmutov - Frontend Engineer',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Cursor />
                 <Particles />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
