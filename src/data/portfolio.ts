@@ -34,7 +34,7 @@ export const DATA: SiteData = {
             tags: ['Next.js', 'TypeScript', 'Tailwind', 'Zustand', 'CoinGecko API', 'Vercel'],
             highlight: ['Next.js', 'TypeScript', 'Zustand'],
             github: 'https://github.com/pakhmutov/crypto-dashboard',
-            live: 'https://crypto-dashboard-three-ruby.vercel.app/',
+            live: 'https://crypto-dashboard-vp.vercel.app/',
         },
         {
             num: '01',
