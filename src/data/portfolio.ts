@@ -28,6 +28,15 @@ export const DATA: SiteData = {
 
     projects: [
         {
+            num: '02',
+            title: 'Crypto Dashboard',
+            description: 'Personal crypto portfolio and market tracker. Features a top-50 market table, candlestick charts with period selector (1W / 1M / 3M / 1Y) powered by TradingView Lightweight Charts, and a portfolio tracker with localStorage persistence.',
+            tags: ['Next.js', 'TypeScript', 'Tailwind', 'Zustand', 'CoinGecko API', 'Vercel'],
+            highlight: ['Next.js', 'TypeScript', 'Zustand'],
+            github: 'https://github.com/pakhmutov/crypto-dashboard',
+            live: 'https://crypto-dashboard-three-ruby.vercel.app/',
+        },
+        {
             num: '01',
             title: 'Code Review Assistant',
             description: 'Web app that takes a code snippet and returns a structured AI-powered review across four categories: bugs, improvements, security, and code style. Built with Next.js App Router and Gemini 2.5 Flash, streamed response with animated category status.',
