@@ -22,43 +22,49 @@ export function ProjectCard({ project }: Props) {
         >
             <div className={`${styles.accent} ${hovered ? styles.accentVisible : ''}`} />
 
-            <div className={styles.cardBody}>
-                <p className={styles.num}>{project.num}</p>
-                <h3 className={styles.title}>{project.title}</h3>
-                <p className={styles.desc}>{project.description}</p>
-                <div className={styles.tags}>
-                    {project.tags.map((t) => (
-                        <span
-                            key={t}
-                            className={`${styles.tag} ${project.highlight.includes(t) ? styles.tagHighlight : ''}`}
-                        >
-                            {t}
-                        </span>
-                    ))}
-                </div>
+            <div className={styles.preview}>
+                <span className={styles.previewNum}>{project.num}</span>
             </div>
 
-            <div className={styles.links}>
-                {project.github && (
-                    <a
-                        href={project.github}
-                        className={styles.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <GitHubIcon /> Code
-                    </a>
-                )}
-                {project.live && (
-                    <a
-                        href={project.live}
-                        className={styles.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        ↗ Live
-                    </a>
-                )}
+            <div className={styles.cardInner}>
+                <div className={styles.cardBody}>
+                    <p className={styles.num}>{project.num}</p>
+                    <h3 className={styles.title}>{project.title}</h3>
+                    <p className={styles.desc}>{project.description}</p>
+                    <div className={styles.tags}>
+                        {project.tags.map((t) => (
+                            <span
+                                key={t}
+                                className={`${styles.tag} ${project.highlight.includes(t) ? styles.tagHighlight : ''}`}
+                            >
+                                {t}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.links}>
+                    {project.github && (
+                        <a
+                            href={project.github}
+                            className={styles.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <GitHubIcon /> Code
+                        </a>
+                    )}
+                    {project.live && (
+                        <a
+                            href={project.live}
+                            className={styles.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ↗ Live
+                        </a>
+                    )}
+                </div>
             </div>
         </div>
     );

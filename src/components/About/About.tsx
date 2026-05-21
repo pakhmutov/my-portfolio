@@ -26,12 +26,21 @@ export function About() {
                     </div>
 
                     <div className={styles.skills}>
-                        {DATA.skills.map((s) => (
-                            <div key={s.name} className={styles.skillRow}>
-                                <span className={styles.skillName}>{s.name}</span>
-                                <span className={styles.skillLevel}>{s.level}</span>
-                            </div>
-                        ))}
+                        {DATA.skills.map((s) => {
+                            const badgeClass = {
+                                CORE: styles.levelCore,
+                                DAILY: styles.levelDaily,
+                                SOLID: styles.levelSolid,
+                                LEARNING: styles.levelLearning,
+                            }[s.level] ?? styles.levelLearning;
+
+                            return (
+                                <div key={s.name} className={styles.skillRow}>
+                                    <span className={styles.skillName}>{s.name}</span>
+                                    <span className={`${styles.skillBadge} ${badgeClass}`}>{s.level}</span>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
