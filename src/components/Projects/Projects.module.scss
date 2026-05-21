@@ -27,7 +27,7 @@
 
 .preview {
     position: relative;
-    height: 88px;
+    height: 80px;
     background: linear-gradient(135deg, rgba(192, 132, 252, 0.08) 0%, rgba(232, 121, 249, 0.04) 100%);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
@@ -57,6 +57,73 @@
 
     @media (max-width: 640px) {
         grid-template-columns: 1fr;
+    }
+}
+
+.cardInnerWithImage {
+    padding: 0;
+    grid-template-columns: 60% 40%;
+    gap: 0;
+    align-items: center;
+
+    .cardBody {
+        padding: 28px 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links {
+        margin-top: auto;
+        padding-top: 20px;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+        .cardBody {
+            padding: 24px 24px 0;
+        }
+    }
+}
+
+.previewInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.previewRight {
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    aspect-ratio: 4 / 3;
+    padding: 10px 10px 10px 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent 65%, var(--bg2) 100%);
+        pointer-events: none;
+    }
+
+    .cardHovered & {
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        min-height: 180px;
+        border-left: none;
+        border-top: 1px solid var(--border);
+
+        &::after {
+            background:
+                linear-gradient(to bottom, transparent 60%, var(--bg2) 100%);
+        }
     }
 }
 
@@ -126,6 +193,28 @@
     flex-direction: column;
     gap: 10px;
     align-items: flex-end;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--muted2);
+    transition: background 0.3s;
+}
+
+.dotActive {
+    background: var(--accent);
 }
 
 .link {

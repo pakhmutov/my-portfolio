@@ -31,7 +31,8 @@ export const DATA: SiteData = {
         {
             num: '02',
             title: 'Crypto Dashboard',
-            description: 'Personal crypto portfolio and market tracker. Top-50 market table with 7-day sparklines and gainers/losers section. Coin pages with candlestick charts (TradingView Lightweight Charts) and live prices via Binance WebSocket. Portfolio tracker with Zustand and localStorage persistence.',
+            images: ['/projects/crypto-dashboard-1.png', '/projects/crypto-dashboard-2.png', '/projects/crypto-dashboard-3.png'],
+            description: 'Personal crypto portfolio and market tracker. Candlestick charts via TradingView, live prices through Binance WebSocket, portfolio tracker with Zustand.',
             tags: ['Next.js', 'TypeScript', 'Tailwind', 'Zustand', 'WebSocket', 'CoinGecko API', 'Vercel'],
             highlight: ['Next.js', 'TypeScript', 'Zustand'],
             github: 'https://github.com/pakhmutov/crypto-dashboard',

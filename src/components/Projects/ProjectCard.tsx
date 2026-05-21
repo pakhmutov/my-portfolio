@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import type { Project } from '@/types';
 import { useFadeIn } from '@/hooks/useFadeIn';
 import styles from './Projects.module.scss';
@@ -12,6 +13,25 @@ interface Props {
 export function ProjectCard({ project }: Props) {
     const ref = useFadeIn();
     const [hovered, setHovered] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+    const images = project.images ?? [];
+    const hasImages = images.length > 0;
+
+    useEffect(() => {
+        if (hovered && images.length > 1) {
+            intervalRef.current = setInterval(() => {
+                setActiveIndex((i) => (i + 1) % images.length);
+            }, 1800);
+        } else {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+            if (!hovered) setActiveIndex(0);
+        }
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [hovered, images.length]);
 
     return (
         <div
@@ -22,11 +42,13 @@ export function ProjectCard({ project }: Props) {
         >
             <div className={`${styles.accent} ${hovered ? styles.accentVisible : ''}`} />
 
-            <div className={styles.preview}>
-                <span className={styles.previewNum}>{project.num}</span>
-            </div>
+            {!hasImages && (
+                <div className={styles.preview}>
+                    <span className={styles.previewNum}>{project.num}</span>
+                </div>
+            )}
 
-            <div className={styles.cardInner}>
+            <div className={`${styles.cardInner} ${hasImages ? styles.cardInnerWithImage : ''}`}>
                 <div className={styles.cardBody}>
                     <p className={styles.num}>{project.num}</p>
                     <h3 className={styles.title}>{project.title}</h3>
@@ -41,30 +63,66 @@ export function ProjectCard({ project }: Props) {
                             </span>
                         ))}
                     </div>
+                    {hasImages && (
+                        <div className={styles.links}>
+                            {project.github && (
+                                <a href={project.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon /> Code
+                                </a>
+                            )}
+                            {project.live && (
+                                <a href={project.live} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                    ↗ Live
+                                </a>
+                            )}
+                        </div>
+                    )}
                 </div>
 
-                <div className={styles.links}>
-                    {project.github && (
-                        <a
-                            href={project.github}
-                            className={styles.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <GitHubIcon /> Code
-                        </a>
-                    )}
-                    {project.live && (
-                        <a
-                            href={project.live}
-                            className={styles.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            ↗ Live
-                        </a>
-                    )}
-                </div>
+                {hasImages ? (
+                    <div className={styles.previewRight}>
+                        <div className={styles.previewInner}>
+                        {images.map((src, i) => (
+                            <Image
+                                key={src}
+                                src={src}
+                                alt={`${project.title} screenshot ${i + 1}`}
+                                fill
+                                style={{
+                                    objectFit: 'cover',
+                                    objectPosition: 'top center',
+                                    opacity: i === activeIndex ? 1 : 0,
+                                    transition: 'opacity 0.5s ease',
+                                }}
+                                sizes="40vw"
+                            />
+                        ))}
+                        </div>
+                        {images.length > 1 && (
+                            <div className={styles.dots}>
+                                {images.map((_, i) => (
+                                    <span
+                                        key={i}
+                                        className={`${styles.dot} ${i === activeIndex ? styles.dotActive : ''}`}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ) : (
+                    <div className={styles.links}>
+                        {project.github && (
+                            <a href={project.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                <GitHubIcon /> Code
+                            </a>
+                        )}
+                        {project.live && (
+                            <a href={project.live} className={styles.link} target="_blank" rel="noopener noreferrer">
+                                ↗ Live
+                            </a>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );

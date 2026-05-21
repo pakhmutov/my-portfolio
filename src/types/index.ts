@@ -6,6 +6,7 @@ export interface Project {
     highlight: string[];
     github: string | null;
     live: string | null;
+    images?: string[];
 }
 
 export interface Post {
