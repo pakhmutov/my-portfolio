@@ -12,7 +12,7 @@ export const DATA: SiteData = {
         'Open to new opportunities — looking for a team that moves thoughtfully and cares about craftsmanship.',
     ],
 
-    stack: ['React', 'Next.js', 'TypeScript', 'SCSS', 'Node.js', 'Figma'],
+    stack: ['React', 'Next.js', 'TypeScript', 'SCSS', 'Tailwind', 'Node.js', 'Figma'],
     stackHighlight: ['React', 'Next.js', 'TypeScript'],
 
     skills: [
@@ -23,15 +23,16 @@ export const DATA: SiteData = {
         { name: 'Node.js', level: 'SOLID' },
         { name: 'REST/GraphQL', level: 'SOLID' },
         { name: 'Figma', level: 'SOLID' },
-        { name: 'Testing', level: 'LEARNING' },
+        { name: 'Tailwind', level: 'SOLID' },
+        { name: 'Testing', level: 'SOLID' },
     ],
 
     projects: [
         {
             num: '02',
             title: 'Crypto Dashboard',
-            description: 'Personal crypto portfolio and market tracker. Features a top-50 market table, candlestick charts with period selector (1W / 1M / 3M / 1Y) powered by TradingView Lightweight Charts, and a portfolio tracker with localStorage persistence.',
-            tags: ['Next.js', 'TypeScript', 'Tailwind', 'Zustand', 'CoinGecko API', 'Vercel'],
+            description: 'Personal crypto portfolio and market tracker. Top-50 market table with 7-day sparklines and gainers/losers section. Coin pages with candlestick charts (TradingView Lightweight Charts) and live prices via Binance WebSocket. Portfolio tracker with Zustand and localStorage persistence.',
+            tags: ['Next.js', 'TypeScript', 'Tailwind', 'Zustand', 'WebSocket', 'CoinGecko API', 'Vercel'],
             highlight: ['Next.js', 'TypeScript', 'Zustand'],
             github: 'https://github.com/pakhmutov/crypto-dashboard',
             live: 'https://crypto-dashboard-vp.vercel.app/',
