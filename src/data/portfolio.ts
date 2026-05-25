@@ -48,6 +48,16 @@ export const DATA: SiteData = {
             github: 'https://github.com/pakhmutov/code-review-assistant',
             live: 'https://code-review-assistant-vp.vercel.app/',
         },
+        {
+            num: '03',
+            title: 'Job Application Tracker',
+            description: 'Kanban board for tracking job applications. Google OAuth, drag-and-drop between status columns, slide-over detail panel with notes, and a stats strip with response rate.',
+            tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'NextAuth', 'SCSS', 'Vercel'],
+            highlight: ['Next.js', 'TypeScript', 'Prisma'],
+            images: ['/projects/job-tracker.png'],
+            github: 'https://github.com/pakhmutov/job-tracker',
+            live: 'https://job-tracker-vp.vercel.app/',
+        },
     ],
 
     posts: [],
